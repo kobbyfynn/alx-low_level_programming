@@ -1,11 +1,12 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- *  *main - program entry
- *   *Return: always 0
+ * print_number - program entry
+ *
+ * @n: int
+ *
  */
 
-int main(void)
+void print_number(int n)
 {
-	return (0);
 }
