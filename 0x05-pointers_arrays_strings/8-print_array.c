@@ -7,13 +7,15 @@
  * @a: array to be printed
  *
  * @n: number of elements
-*/
+ */
 
 void print_array(int *a, int n)
 {
-	for (n = 0; n <= 4; n++)
+	int i;
+
+	for (i = 0; i <= (n - 1); i++)
 	{
-		if (n < 4)
+		if (i < (n - 1))
 		{
 			printf("%d, ", *a++);
 		}
