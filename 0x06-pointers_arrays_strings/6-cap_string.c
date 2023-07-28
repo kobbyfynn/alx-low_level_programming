@@ -11,8 +11,7 @@
 char *cap_string(char *s)
 {
 	int j, i = 0;
-	/* j represents whether or not the current character is a start of a new
-	 * word */
+	/* j = whether or not the current character is a start of a new word*/
 
 	for (; s[i] != '\0'; i++)
 	{
