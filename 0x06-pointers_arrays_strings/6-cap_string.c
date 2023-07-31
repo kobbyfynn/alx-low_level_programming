@@ -10,7 +10,7 @@
 
 char *cap_string(char *s)
 {
-	int j, i = 0;
+	int j = 1, i = 0;
 	/* j = whether or not the current character is a start of a new word*/
 
 	for (; s[i] != '\0'; i++)
