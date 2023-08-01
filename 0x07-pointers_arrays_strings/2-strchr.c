@@ -9,7 +9,7 @@
  *
  * Return: a pointer to the first occurrence of the character c in the string s
  * or NULL if the character is not found
-*/
+ */
 
 char *_strchr(char *s, char c)
 {
@@ -21,6 +21,10 @@ char *_strchr(char *s, char c)
 		{
 			return (&s[i]);
 		}
+	}
+	if (c == '\0')
+	{
+		return (&s[i]);
 	}
 	return (NULL);
 }
