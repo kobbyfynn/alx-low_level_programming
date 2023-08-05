@@ -1,35 +1,46 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
- * main - program that multiplies two numbers.
+ * main -  program that adds positive numbers.
  *
  * @argc: argument count
  *
  * @argv: argument vector
  *
- * Return: If the program does not receive two arguments, your program
- * should print Error, followed by a new line, and return 1
+ * Return: If one of the number contains symbols that are not digits,
+ * print Error, followed by a new line, and return 1
  */
 
 int main(int argc, char *argv[])
 {
-	int i;
-	int mul = 1;
+	int i, j;
+	int add = 0;
 
-	if (argc != 3)
+	if (argc < 2)
 	{
-		printf("Error\n");
-		return (1);
+		printf("0\n");
 	}
 	else
 	{
-		for (i = 1; i < 3; i++)
+		for (i = 1; i < argc; i++)
 		{
-			mul *= atoi(argv[i]);
-			printf("%d\n", mul);
+			for (j = 0; argv[i][j] != '\0'; j++)
+			{
+				if (isdigit(argv[i][j]))
+				{
+					add += atoi(&argv[i][j]);
+				}
+				else
+				{
+					printf("Error\n");
+					return (1);
+				}
+			}
 		}
+		printf("%d\n", add);
 	}
 
-	return (mul);
+	return (0);
 }
