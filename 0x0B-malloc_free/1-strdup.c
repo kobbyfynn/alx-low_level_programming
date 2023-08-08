@@ -44,14 +44,20 @@ int _strlen(char *s)
 {
 	int i;
 
-	i = 0;
-	while (s[i] != '\0')
+	if (s == NULL)
 	{
-		i++;
+		return (1);
 	}
-	return (i);
+	else
+	{
+		i = 0;
+		while (s[i] != '\0')
+		{
+			i++;
+		}
+	}
 
-	/*putchar('\n');*/
+	return (i);
 }
 
 /**
@@ -63,7 +69,7 @@ int _strlen(char *s)
  * @src: source string
  *
  * Return: pointer to dest
-*/
+ */
 char *_strcpy(char *dest, char *src)
 {
 	int i;
