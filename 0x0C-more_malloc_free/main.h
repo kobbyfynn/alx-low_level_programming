@@ -17,5 +17,6 @@ char *_strncat(char *dest, char *src, int n);
 char *_strcpy(char *dest, char *src);
 char *_strcat(char *dest, char *src);
 int **multi(int r, int c);
+char *_memset(char *s, char b, size_t n);
 
 #endif
