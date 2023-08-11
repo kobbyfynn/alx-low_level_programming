@@ -14,14 +14,16 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	/* total mem needed*/
-	size_t tm = nmemb * size;
-	void *am = malloc(tm);/* allocated mem*/
+	unsigned int tm;
+	char *am;
 
 	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
 	}
+
+	tm = nmemb * size;
+	am = malloc(tm);/* allocated mem*/
 	if (am == NULL)
 	{
 		return (NULL);
@@ -30,7 +32,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		_memset(am, 0, tm);
 	}
-
 	return (am);
 }
 
