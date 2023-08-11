@@ -7,11 +7,13 @@
  *
  * @b: memory to be allocated
  *
- * Return: function that allocates memory using malloc.
+ * Return:  a pointer to the allocated memory
  */
 void *malloc_checked(unsigned int b)
 {
-	size_t *am = malloc(sizeof(*am) * b);
+	void *am;
+
+	am = malloc(b);
 
 	if (am == NULL)
 	{
